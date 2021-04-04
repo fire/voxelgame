@@ -1,15 +1,16 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh"
+path="res://.godot/imported/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh"
 
 [deps]
 
-files=[ "res://.import/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh" ]
+files=[ "res://.godot/imported/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh" ]
 
 source_file="res://blocky_terrain/custom_mesh.obj"
-dest_files=[ "res://.import/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh", "res://.import/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh" ]
+dest_files=[ "res://.godot/imported/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh", "res://.godot/imported/custom_mesh.obj-87fe42838aa24483eaffe897aca10e00.mesh" ]
 
 [params]
 

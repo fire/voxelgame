@@ -1,10 +1,15 @@
-extends Spatial
+extends Node3D
 
-export var sensitivity = 0.4
-export var min_angle = -90
-export var max_angle = 90
-export var capture_mouse = true
-export var distance = 0.0
+@export
+var sensitivity = 0.4
+@export 
+var min_angle = -90
+@export
+var max_angle = 90
+@export 
+var capture_mouse = true
+@export 
+var distance = 0.0
 
 var _yaw = 0
 var _pitch = 0
@@ -26,11 +31,11 @@ func _unhandled_input(event):
 		
 		# The game uses the wheel already, put that "debug" adjustment behind a modifier
 		if event.control:
-			if event.button_index == BUTTON_WHEEL_UP:
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 				distance = max(distance - 1 - distance * 0.1, 0)
 				update_rotations()
 			
-			elif event.button_index == BUTTON_WHEEL_DOWN:
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				distance = max(distance + 1 + distance * 0.1, 0)
 				update_rotations()
 	

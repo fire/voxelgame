@@ -7,7 +7,7 @@ class BaseInfo:
 	var sprite : Texture
 
 
-var base_info := BaseInfo.new()
+var base_info = BaseInfo.new()
 
 
 func use(_trans: Transform):

@@ -1,15 +1,16 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh"
+path="res://.godot/imported/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh"
 
 [deps]
 
-files=[ "res://.import/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh" ]
+files=[ "res://.godot/imported/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh" ]
 
 source_file="res://blocky_game/blocks/rail/rail_slope_nz.obj"
-dest_files=[ "res://.import/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh", "res://.import/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh" ]
+dest_files=[ "res://.godot/imported/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh", "res://.godot/imported/rail_slope_nz.obj-8083448a760d70792773053cd1e1633a.mesh" ]
 
 [params]
 

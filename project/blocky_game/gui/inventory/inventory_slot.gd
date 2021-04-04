@@ -4,8 +4,8 @@ signal pressed
 
 const InventoryItemDisplay = preload("../inventory_item_display.gd")
 
-onready var _select_bg = $SelectBG
-onready var _display = $TextureRect
+var _select_bg = $SelectBG
+var _display = $TextureRect
 
 
 func _gui_input(event):
@@ -27,6 +27,6 @@ func _notification(what: int):
 				_select_bg.visible = false
 
 
-func get_display() -> InventoryItemDisplay:
+func get_display():
 	return _display
 

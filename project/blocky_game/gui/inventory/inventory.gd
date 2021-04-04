@@ -8,9 +8,9 @@ const HOTBAR_HEIGHT = 1
 
 const InventoryItem = preload("../../player/inventory_item.gd")
 
-onready var _bag_container = $CC/PC/VB/Bag
-onready var _hotbar_container = $CC/PC/VB/Hotbar
-onready var _dragged_item_view = $DraggedItem
+var _bag_container = $CC/PC/VB/Bag
+var _hotbar_container = $CC/PC/VB/Hotbar
+var _dragged_item_view = $DraggedItem
 
 # TODO Is it worth having the hotbar in the first indexes instead of the last ones?
 var _slots := []
@@ -69,7 +69,7 @@ func get_hotbar_slot_count() -> int:
 	return BAG_WIDTH
 
 
-func get_hotbar_slot_data(i) -> InventoryItem:
+func get_hotbar_slot_data(i):
 	var hotbar_begin_index := BAG_WIDTH * BAG_HEIGHT
 	return _slots[hotbar_begin_index + i]
 

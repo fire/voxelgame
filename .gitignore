@@ -4,3 +4,5 @@ debug_data/
 *.vxbm
 *.vxr
 *.vxrm
+
+project/.godot/

@@ -52,7 +52,7 @@ func _init():
 
 	var tallest_tree_height = 0
 	for structure in _tree_structures:
-		var h = int(structure.voxels.get_size().y)
+		var h = int(structure.get("voxels").get_size().y)
 		if tallest_tree_height < h:
 			tallest_tree_height = h
 	_trees_min_y = _heightmap_min_y
@@ -158,12 +158,12 @@ func _generate_block(buffer: VoxelBuffer, origin_in_voxels: Vector3, lod: int):
 
 		for structure_instance in structure_instances:
 			var pos : Vector3 = structure_instance[0]
-			var structure : Structure = structure_instance[1]
-			var lower_corner_pos := pos - structure.offset
+			var structure : Dictionary = structure_instance[1]
+			var lower_corner_pos : Variant = pos - structure.offset
 			var aabb := AABB(lower_corner_pos, structure.voxels.get_size() + Vector3(1, 1, 1))
 
-			if aabb.intersects(block_aabb):
-				voxel_tool.paste(lower_corner_pos, structure.voxels, AIR)
+			if aabb.intersects(block_aabb): 
+				voxel_tool.paste(lower_corner_pos, structure.voxels, AIR, _CHANNEL)
 
 	buffer.optimize()
 
@@ -182,7 +182,7 @@ func _get_tree_instances_in_chunk(
 		if pos.y > 0:
 			pos -= offset
 			var si := rng.randi() % len(_tree_structures)
-			var structure : Structure = _tree_structures[si]
+			var structure : Dictionary = _tree_structures[si]
 			tree_instances.append([pos.round(), structure])
 
 

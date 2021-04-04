@@ -1,13 +1,18 @@
-extends Spatial
+extends Node3D
 
-export var speed = 5.0
-export var gravity = 9.8
-export var jump_force = 5.0
-export(NodePath) var head = null
+@export 
+var speed = 5.0
+@export 
+var gravity = 9.8
+@export
+var jump_force = 5.0
+@export_node_path
+var head = NodePath()
 
 # Not used in this script, but might be useful for child nodes because
 # this controller will most likely be on the root
-export(NodePath) var terrain = null
+@export_node_path
+var terrain = NodePath()
 
 var _velocity = Vector3()
 var _grounded = false

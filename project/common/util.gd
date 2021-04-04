@@ -1,6 +1,6 @@
 
 static func create_wirecube_mesh(color = Color(1,1,1)):
-	var positions = PoolVector3Array([
+	var positions = PackedVector3Array([
 		Vector3(0, 0, 0),
 		Vector3(1, 0, 0),
 		Vector3(1, 0, 1),
@@ -10,11 +10,11 @@ static func create_wirecube_mesh(color = Color(1,1,1)):
 		Vector3(1, 1, 1),
 		Vector3(0, 1, 1)
 	])
-	var colors = PoolColorArray([
+	var colors = PackedColorArray([
 		color, color, color, color,
 		color, color, color, color,
 	])
-	var indices = PoolIntArray([
+	var indices = PackedInt32Array([
 		0, 1,
 		1, 2,
 		2, 3,
@@ -40,8 +40,8 @@ static func create_wirecube_mesh(color = Color(1,1,1)):
 	return mesh
 
 
-static func calculate_normals(positions, indices) -> PoolVector3Array:
-	var out_normals = PoolVector3Array()
+static func calculate_normals(positions, indices) -> PackedVector3Array:
+	var out_normals = PackedVector3Array()
 	
 	var tcounts = []
 	tcounts.resize(positions.size())

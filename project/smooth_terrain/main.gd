@@ -1,8 +1,8 @@
 extends Node
 
-onready var _terrain = $VoxelTerrain
-onready var _avatar = $SpectatorAvatar
-onready var _light = $DirectionalLight
+var _terrain = $VoxelTerrain
+var _avatar = $SpectatorAvatar
+var _light = $DirectionalLight
 
 var _process_stats = {}
 var _displayed_process_stats = {}

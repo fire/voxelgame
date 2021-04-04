@@ -2,16 +2,20 @@ extends CenterContainer
 
 const InventoryItem = preload("../../player/inventory_item.gd")
 
-onready var _selected_frame = $HBoxContainer/HotbarSlot/HotbarSlotSelect
-onready var _slot_container = $HBoxContainer
-onready var _block_types = get_node("/root/Main/Blocks")
-onready var _inventory = get_node("../Inventory")
+var _selected_frame
+var _slot_container
+var _block_types
+var _inventory
 
 var _hotbar_index := 0
 
 
 func _ready():
 	call_deferred("_update_views")
+	_selected_frame = $HBoxContainer/HotbarSlot/HotbarSlotSelect
+	_slot_container = $HBoxContainer
+	_block_types = get_node("/root/Main/Blocks")
+	_inventory = get_node("../Inventory")
 
 
 func _update_views():
@@ -42,7 +46,7 @@ func select_slot(i: int):
 	slot.add_child(_selected_frame)
 
 
-func get_selected_item() -> InventoryItem:
+func get_selected_item():
 	return _inventory.get_hotbar_slot_data(_hotbar_index)
 
 

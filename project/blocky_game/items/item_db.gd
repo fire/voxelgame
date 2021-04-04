@@ -15,7 +15,7 @@ func _init():
 	})
 
 
-func get_item(id: int) -> Item:
+func get_item(id: int):
 	assert(id >= 0)
 	return _items[id]
 
@@ -23,7 +23,7 @@ func get_item(id: int) -> Item:
 func _create_item(d: Dictionary):
 	var dir = str(ROOT, "/", d.name, "/")
 	
-	var item : Item
+	var item
 	if d.has("behavior"):
 		var behavior_script = load(str(dir, d.name, ".gd"))
 		item = behavior_script.new()

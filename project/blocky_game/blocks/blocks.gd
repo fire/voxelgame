@@ -145,7 +145,7 @@ func _init():
 	})
 
 
-func get_block(id: int) -> Block:
+func get_block(id: int):
 	assert(id >= 0)
 	return _blocks[id]
 
@@ -154,7 +154,7 @@ func get_model_library() -> VoxelLibrary:
 	return _voxel_library
 
 
-func get_block_by_name(block_name: String) -> Block:
+func get_block_by_name(block_name: String):
 	for b in _blocks:
 		if b.base_info.name == block_name:
 			return b
@@ -183,7 +183,7 @@ func _create_block(params: Dictionary):
 		"behavior": ""
 	})
 
-	var block : Block
+	var block
 	if params.behavior != "":
 		# Block with special behavior
 		var behavior_path := str(ROOT, "/", params.directory, "/", params.behavior)

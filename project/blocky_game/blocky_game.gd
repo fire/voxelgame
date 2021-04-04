@@ -1,6 +1,10 @@
 extends Node
 
-onready var _light = $DirectionalLight
+var _light = null
+
+
+func _ready():
+	_light = $DirectionalLight
 
 
 func _unhandled_input(event):
